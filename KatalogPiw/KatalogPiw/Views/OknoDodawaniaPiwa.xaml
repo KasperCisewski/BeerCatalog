@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="using:KatalogPiw.Views"
+             x:Class="KatalogPiw.Views.OknoDodawaniaPiwa">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Nazwa Piwa" HorizontalOptions="Start"/>
+            <Entry x:Name="NazwaPiwa" WidthRequest="150"/>
+            <Picker x:Name="BrowarPicker" Title="Wybierz browar" ItemsSource="{Binding Browary}" SelectedItem="{Binding NazwaBrowaru}" ItemDisplayBinding="{Binding NazwaBrowaru}"  />
+            <Picker x:Name="GatunekPicker" Title="Wybierz gatunek" ItemsSource="{Binding Gatunki}" SelectedItem="{Binding NazwaGatunku}" ItemDisplayBinding="{Binding NazwaGatunku}"  />
+            <Button x:Name="btn" Clicked="buttonZapiszPiwo_Click" Text="Submit" FontSize="14" BorderColor="Black" MinimumWidthRequest="25" MinimumHeightRequest="50"/>
+            <Button x:Name="RefreshButton" Clicked="buttonRefreshButton_Click" Text="Refresh" FontSize="14" MinimumWidthRequest="25" MinimumHeightRequest="50"/>
+            <Button x:Name="PokazListe" Clicked="buttonPokazListe_Click" Text="Pokaz Liste" FontSize="13" MinimumWidthRequest="25" MinimumHeightRequest="50"/>
+        </StackLayout>
+
+        
+    </ContentPage.Content>
+</ContentPage>

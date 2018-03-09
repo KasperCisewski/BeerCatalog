@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KatalogPiw.Views.PokazListePiw">
+    <StackLayout>
+    <Label Text="Piwa" FontSize="20"/>
+    <ListView x:Name="ListaPiw" ItemsSource="{Binding Piwa}"  ItemTapped="Handle_ItemTapped" CachingStrategy="RecycleElement" MinimumHeightRequest="30" MinimumWidthRequest="30">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <ViewCell.View>
+                        <StackLayout Padding="10">
+                             <StackLayout Orientation="Horizontal">
+                                  <Label Text="{Binding NazwaPiwa}" FontAttributes="Bold"/>
+                                    <Label Text=" |"/>
+                                    <Label Text="{Binding Browar.NazwaBrowaru}" FontAttributes="Italic"/>
+                                    <Label Text=" |"/>
+                                    <Label Text="{Binding Gatunek.NazwaGatunku}"/>
+                             </StackLayout>
+                        </StackLayout>
+                    </ViewCell.View>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+    <Button x:Name="GenerujStrone" Clicked="buttonGenerujStrone_Click" Text="Generuj PDF" FontSize="14" MinimumWidthRequest="25"  MinimumHeightRequest="50" HorizontalOptions="EndAndExpand"/>
+    </StackLayout>
+
+</ContentPage>
