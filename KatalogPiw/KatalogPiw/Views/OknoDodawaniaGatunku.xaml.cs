@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using KatalogPiw.ViewModels;
 
 namespace KatalogPiw.Views
 {
@@ -29,6 +30,7 @@ namespace KatalogPiw.Views
                 Models.Gatunek gatunek = new Models.Gatunek();
                 gatunek.NazwaGatunku = NazwaGatunku.Text;
                 MainPage.ListaGatunkow.Add(gatunek);
+                
                 DisplayAlert("", "Dodano nowy gatunek", "OK");
             }
         }

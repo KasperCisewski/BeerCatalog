@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using KatalogPiw.ViewModels;
 
 namespace KatalogPiw.Views
 {
@@ -22,7 +23,10 @@ namespace KatalogPiw.Views
         {
             var text = e.OldTextValue;
             var newText = e.NewTextValue;
+            
         }
+
+        /*
         private async void buttonZapiszBrowar_Click(object sender, EventArgs e)
         {
             if (NazwaBrowaru.Text == "Nazwa Browaru")
@@ -31,12 +35,17 @@ namespace KatalogPiw.Views
             }
             else
             {
+                AddBrowar(NazwaBrowaru.Text);
+
+                /*
                 Models.Browar browar = new Models.Browar();
                 browar.NazwaBrowaru = NazwaBrowaru.Text;
                 MainPage.ListaBrowarow.Add(browar);
+               
                 DisplayAlert("", "Dodano nowy browar", "OK");
             }
-        }
-    
+            
+        }*/
+
     }
 }

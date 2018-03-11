@@ -18,6 +18,12 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\Beer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Browar.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Gatunek.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\BeerServices.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\BrowarServices.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\DatabaseConnection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\GatunekServices.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\IDatabaseConnection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\ISave.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DodawanieBrowaruViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DodawanieGatunkuViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DodawaniePiwaViewModel.cs" />
@@ -68,13 +74,13 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Services\" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\PokazListePiw.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Data\" />
   </ItemGroup>
   <!--#if (CreateBackendProject)
     <Compile Include="$(MSBuildThisFileDirectory)Services\AzureDataStore.cs" />

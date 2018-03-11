@@ -2,7 +2,16 @@
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Threading.Tasks;
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using System.IO;
+using Syncfusion.Pdf.Security;
+using Syncfusion.Pdf.Graphics;
+using System.Reflection;
+using Syncfusion.Pdf.Grid;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -24,7 +33,7 @@ namespace KatalogPiw.Views
 
         private async void buttonGenerujStrone_Click(object sender, TextChangedEventArgs e)
         {
-           
+         
         }
         async void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
         {
