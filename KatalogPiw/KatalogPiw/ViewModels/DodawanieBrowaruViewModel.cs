@@ -23,7 +23,9 @@ namespace KatalogPiw.ViewModels
             AddBrowarCommand = new Command<string>((key) =>
             {
                 key = "test";
+                
                 BrowarList.Add(new Browar { NazwaBrowaru = inputStringBrowar });
+                OnPropertyChanged(BrowarList.Count.ToString());
             });
             
         }
@@ -66,5 +68,6 @@ namespace KatalogPiw.ViewModels
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+
     }
 }

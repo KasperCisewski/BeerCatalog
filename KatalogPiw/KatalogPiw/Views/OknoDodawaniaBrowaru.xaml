@@ -6,29 +6,31 @@
     <ContentPage.BindingContext>
         <ViewModels:DodawanieBrowaruViewModel/>
     </ContentPage.BindingContext>
-    <Grid>
     <Grid Padding="10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-        <ListView ItemsSource="{Binding BrowarList}">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <StackLayout Orientation="Horizontal">
-                            <Label Text="{Binding NazwaBrowaru}"/>
-                        </StackLayout>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-    </Grid>
-    <Grid>
-
         <StackLayout>
-            <Label Text="Nowy Browar" HorizontalOptions="Center"/>
-            <Entry x:Name="NazwaBrowaru" Text="{Binding InputStringBrowar}" WidthRequest="150"/>
-            <Button x:Name="btn" Command="{Binding AddBrowarCommand}" Text="Zapisz Browar" FontSize="14" BorderColor="Black" MinimumWidthRequest="25" MinimumHeightRequest="50"/>
+            <Grid >
+                <ListView ItemsSource="{Binding BrowarList}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding NazwaBrowaru}"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+            <Grid>
 
+                <StackLayout>
+                    <Label Text="Nowy Browar" HorizontalOptions="Center"/>
+                    <Entry x:Name="NazwaBrowaru" Text="{Binding InputStringBrowar}" WidthRequest="150"/>
+                    <Button x:Name="btn" Command="{Binding AddBrowarCommand}" Text="Zapisz Browar" FontSize="14" BorderColor="Black" MinimumWidthRequest="25" MinimumHeightRequest="50"/>
+
+                </StackLayout>
+            </Grid>
         </StackLayout>
-    </Grid>
     </Grid>
 
 
