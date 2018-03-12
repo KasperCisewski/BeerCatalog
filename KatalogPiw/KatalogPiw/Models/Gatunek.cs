@@ -11,11 +11,6 @@ namespace KatalogPiw.Models
 
         [PrimaryKey, NotNull]
         public string NazwaGatunku { get; set; }
-        /*
-        public Gatunek(string nazwaGatunku)
-        {
-            this.NazwaGatunku = nazwaGatunku;
-        }
-        */
+
     }
 }

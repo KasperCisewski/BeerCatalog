@@ -7,25 +7,7 @@ namespace KatalogPiw.Models
 {
     public class Browar
     {
-        private string _nazwaBrowaru;
         [PrimaryKey, NotNull]
-        public string NazwaBrowaru
-        {
-            get
-            {
-                return _nazwaBrowaru;
-            }
-            set
-            {
-                this._nazwaBrowaru = value;
-            }
-
-        }
-        /*
-        public Browar(string nazwaBrowaru)
-        {
-            this.NazwaBrowaru = nazwaBrowaru;
-        }
-        */
+        public string NazwaBrowaru { get; set; }
     }
 }

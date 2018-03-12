@@ -3,15 +3,14 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Text;
+using Xamarin.Forms;
 
 namespace KatalogPiw.ViewModels
 {
-    public class DodawaniePiwaViewModel:INotifyPropertyChanged
+    public class DodawaniePiwaViewModel
     {
-        public event PropertyChangedEventHandler PropertyChanged;
-    
 
-        
+
         public List<Models.Browar> Browary { get; set; }
         public List<Models.Gatunek> Gatunki { get; set; }
 
@@ -30,15 +29,6 @@ namespace KatalogPiw.ViewModels
             Gatunki = listaGatunkow;
 
 
-        }
-      
-
-        private void NotifyPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-            }
         }
     }
 }

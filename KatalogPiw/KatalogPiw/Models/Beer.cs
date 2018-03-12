@@ -2,16 +2,15 @@
 using System.Collections.Generic;
 using System.Text;
 using SQLite;
+using Xamarin.Forms;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace KatalogPiw.Models
 {
     public class Beer
     {
-        // public int ID { get; set; }
         [PrimaryKey]
         public int Id { get; set; }
-        public string KodKreskowy { get; set; }
         public string NazwaPiwa { get; set; }
         public Browar Browar { get; set; }
         public double CenaNettoBezRabatu { get; set; }
@@ -20,12 +19,16 @@ namespace KatalogPiw.Models
         public string Parametry { get; set; }
         public string Opis { get; set; }
         public string FoodParing { get; set; }
-        public Image Image;
+       // ImageSource imageSource;
 
-       public Beer(int Id,string KodKreskowy,string NazwaPiwa,Browar Browar,double CenaNettoBezRabatu,double CenaNettoZRabatem, Gatunek Gatunek,string Parametry,string Opis,string FoodParing)
+       public Beer()
+        {
+
+        }
+
+       public Beer(int Id,string NazwaPiwa,Browar Browar,double CenaNettoBezRabatu,double CenaNettoZRabatem, Gatunek Gatunek,string Parametry,string Opis,string FoodParing)
         {
             this.Id = Id;
-            this.KodKreskowy = KodKreskowy;
             this.NazwaPiwa = NazwaPiwa;
             this.Browar = Browar;
             this.CenaNettoBezRabatu = CenaNettoBezRabatu;
@@ -35,11 +38,5 @@ namespace KatalogPiw.Models
             this.Opis = Opis;
             this.FoodParing = FoodParing;
         }
-
-      //  public double SkalaGorzkosci { get; set; }
-      //  public double ZawartoscProcentow { get; set; }
-        //  public List<string> Skladniki { get; set; }
-
-
     }
 }

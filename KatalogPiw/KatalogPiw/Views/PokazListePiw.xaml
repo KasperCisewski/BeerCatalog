@@ -12,6 +12,7 @@
                         <StackLayout Padding="10">
                              <StackLayout Orientation="Horizontal">
                                     <Label Text="{Binding Id} " FontAttributes="Bold"/>
+                                    <Label Text=" |"/>
                                     <Label Text="{Binding NazwaPiwa}" FontAttributes="Bold"/>
                                     <Label Text=" |"/>
                                     <Label Text="{Binding Browar.NazwaBrowaru}" FontAttributes="Italic"/>
