@@ -7,21 +7,21 @@ using System.ComponentModel;
 
 namespace KatalogPiw.ViewModels
 {
-    class DodawanieGatunkuViewModel : INotifyPropertyChanged
+    class DodawanieGatunkuViewModel 
     {
-        public List<Gatunek> GatunekList { get; set; }
+        //public List<Gatunek> GatunekList { get; set; }
 
-        public DodawanieGatunkuViewModel()
-        {
-            InitializeGatunekData();
-        }
+        //public DodawanieGatunkuViewModel()
+        //{
+        //    InitializeGatunekData();
+        //}
 
-        private void InitializeGatunekData()
-        {
-            var gatunekServices = new GatunekServices();
-            GatunekList = gatunekServices.GetGatunek();
-        }
+        //private void InitializeGatunekData()
+        //{
+        //    var gatunekServices = new GatunekServices();
+        //    GatunekList = gatunekServices.GetGatunek();
+        //}
 
-        public event PropertyChangedEventHandler PropertyChanged;
+        //public event PropertyChangedEventHandler PropertyChanged;
     }
 }

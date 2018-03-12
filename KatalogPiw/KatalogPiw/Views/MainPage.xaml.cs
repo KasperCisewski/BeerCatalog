@@ -12,8 +12,18 @@ namespace KatalogPiw.Views
         public static List<Models.Gatunek> ListaGatunkow = new List<Models.Gatunek>();
         public static List<Models.Beer> ListaPiw = new List<Models.Beer>();
         public MainPage ()
-		{        
-			InitializeComponent ();
+		{
+            Init();
+            InitializeComponent();
 		}
+        private void Init()
+        {
+            Models.Browar browar = new Models.Browar();
+            Models.Gatunek gatunek = new Models.Gatunek();
+            browar.NazwaBrowaru = "Pinta";
+            gatunek.NazwaGatunku = "IPA";
+            ListaGatunkow.Add(gatunek);
+            ListaBrowarow.Add(browar);
+        }
 	}
 }

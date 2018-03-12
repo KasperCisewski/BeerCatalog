@@ -6,27 +6,19 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using KatalogPiw.ViewModels;
 
 namespace KatalogPiw.Views
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class OknoDodawaniaBrowaru : ContentPage
-	{
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class OknoDodawaniaBrowaru : ContentPage
+    {
         ViewModels.DodawanieBrowaruViewModel vm;
-		public OknoDodawaniaBrowaru ()
-		{
-           // vm = new ViewModels.DodawanieBrowaruViewModel();
-			InitializeComponent ();
-		}
-        private void EditorTextChanged(object sender, TextChangedEventArgs e)
+        public OknoDodawaniaBrowaru()
         {
-            var text = e.OldTextValue;
-            var newText = e.NewTextValue;
-            
+            // vm = new ViewModels.DodawanieBrowaruViewModel();
+            InitializeComponent();
         }
 
-        /*
         private async void buttonZapiszBrowar_Click(object sender, EventArgs e)
         {
             if (NazwaBrowaru.Text == "Nazwa Browaru")
@@ -35,17 +27,12 @@ namespace KatalogPiw.Views
             }
             else
             {
-                AddBrowar(NazwaBrowaru.Text);
-
-                /*
                 Models.Browar browar = new Models.Browar();
                 browar.NazwaBrowaru = NazwaBrowaru.Text;
                 MainPage.ListaBrowarow.Add(browar);
-               
                 DisplayAlert("", "Dodano nowy browar", "OK");
             }
-            
-        }*/
+        }
 
     }
 }

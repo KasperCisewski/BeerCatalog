@@ -8,19 +8,9 @@ namespace KatalogPiw.Models
 {
     public class Gatunek
     {
-        public string _nazwaGatunku;
-        [PrimaryKey, NotNull]
-        public string NazwaGatunku {
-            get
-            {
-                return _nazwaGatunku;
-            }
-            set
-            {
-                this._nazwaGatunku = value;
-            }
 
-        }
+        [PrimaryKey, NotNull]
+        public string NazwaGatunku { get; set; }
         /*
         public Gatunek(string nazwaGatunku)
         {
