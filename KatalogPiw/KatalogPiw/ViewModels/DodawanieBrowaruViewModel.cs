@@ -8,67 +8,58 @@ using System.ComponentModel;
 using System.Windows.Input;
 using Xamarin.Forms;
 using System.Collections.ObjectModel;
+using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
+using System.Collections.Specialized;
 
 namespace KatalogPiw.ViewModels
 {
-    public class DodawanieBrowaruViewModel 
+    public class DodawanieBrowaruViewModel:INotifyCollectionChanged 
     {
-    //    public ObservableCollection<Browar> BrowarList { get; set; }
+        //    public ObservableCollection<Browar> BrowarList { get; set; }
+        private readonly ObservableCollection<Browar> _browarList;
+        public ObservableCollection<Browar> BrowarList
+        {
+            get { return _browarList; }
+           
+        }
+
+        public DodawanieBrowaruViewModel()
+        {
+            _browarList = new ObservableCollection<Browar>();
+           // _browarList.CollectionChanged += BrowarList_CollectionChanged;
+
+        }
+
+        private void BrowarList_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
+        {
+
+        }
+
+       
 
 
+        public void DodajBrowar(Browar browar)
+        {
+            //var browar = new Browar();
+            //browar.NazwaBrowaru = nazwa;
+            _browarList.Add(browar);
+            notifyCollectionChanged(new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Add, browar));
 
-    //    string inputStringBrowar = "";
-    //    public DodawanieBrowaruViewModel()
-    //    {
-    //        InitializeBrowarData();
-    //        AddBrowarCommand = new Command<string>((key) =>
-    //        {
-    //            key = "test";
-                
-    //            BrowarList.Add(new Browar { NazwaBrowaru = inputStringBrowar });
-    //            OnPropertyChanged(BrowarList.Count.ToString());
-    //        });
-            
-    //    }
+            Views.MainPage.ListaBrowarow.Add(browar);
+        }
 
-    //    public string InputStringBrowar
-    //    {
-    //        set  //powinno byc protected?
-    //        {
-    //            if (inputStringBrowar != value )
-    //            {
-    //                inputStringBrowar = value;
-    //                OnPropertyChanged("InputStringBrowar");
-    //            }
-    //        }
-    //        get
-    //        {
-    //            return inputStringBrowar;
-    //        }
-    //    }
+        public event NotifyCollectionChangedEventHandler CollectionChanged;
 
-    //    public ICommand AddBrowarCommand { set; get; }
+        private void notifyCollectionChanged(NotifyCollectionChangedEventArgs args)
+        {
+            if(CollectionChanged!=null)
+            {
+                CollectionChanged(this, args);
+            }
+        }
 
-    //    private void InitializeBrowarData()
-    //    {
-    //        var browarServices = new BrowarServices();
-    //        BrowarList = browarServices.GetBrowar();
-    //    }
 
-        
-
-    //        /*
-    //    public void AddBrowar(string browar)
-    //    {
-    //        BrowarList.Add(new Browar { NazwaBrowaru = browar });
-    //    }
-    //    */
-    //    public event PropertyChangedEventHandler PropertyChanged;
-
-    //    protected void OnPropertyChanged(string propertyName)
-    //    {
-    //        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-    //    }
 
     }
 }

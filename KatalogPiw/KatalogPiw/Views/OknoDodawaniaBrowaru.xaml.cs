@@ -15,7 +15,8 @@ namespace KatalogPiw.Views
         ViewModels.DodawanieBrowaruViewModel vm;
         public OknoDodawaniaBrowaru()
         {
-            // vm = new ViewModels.DodawanieBrowaruViewModel();
+             vm = new ViewModels.DodawanieBrowaruViewModel();
+            BindingContext = vm;
             InitializeComponent();
         }
 
@@ -27,12 +28,26 @@ namespace KatalogPiw.Views
             }
             else
             {
+                string Nazwa = NazwaBrowaru.Text;
                 Models.Browar browar = new Models.Browar();
-                browar.NazwaBrowaru = NazwaBrowaru.Text;
-                MainPage.ListaBrowarow.Add(browar);
-                DisplayAlert("", "Dodano nowy browar", "OK");
+                browar.NazwaBrowaru = Nazwa;
+                vm.DodajBrowar(browar);
+                //Models.Browar browar = new Models.Browar();
+                //browar.NazwaBrowaru = NazwaBrowaru.Text;
+                //MainPage.ListaBrowarow.Add(browar);
+                //DisplayAlert("", "Dodano nowy browar", "OK");
             }
         }
 
+        async void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            //    if (e.Item == null)
+            //        return;
+
+            //    await DisplayAlert("Item Tapped", "An item was tapped.", "OK");
+
+            //    //Deselect Item
+            //    ((ListView)sender).SelectedItem = null;
+        }
     }
 }

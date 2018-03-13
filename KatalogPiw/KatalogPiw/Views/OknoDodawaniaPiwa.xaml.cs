@@ -43,7 +43,6 @@ namespace KatalogPiw.Views
                 //piwo.Browar = (Models.Browar)BrowarPicker.SelectedItem;
                 //piwo.Gatunek = (Models.Gatunek)GatunekPicker.SelectedItem;
                 Models.Beer piwo = new Models.Beer(MainPage.ListaPiw.Count + 1, NazwaPiwa.Text, (Models.Browar)BrowarPicker.SelectedItem, Convert.ToDouble(CenaNettoBR.Text), Convert.ToDouble(CenaNettoR.Text), (Models.Gatunek)GatunekPicker.SelectedItem, Parametry.Text, Opis.Text, FoodParing.Text);
-                //konstruktor zrobic i przypisywać w nim
                 MainPage.ListaPiw.Add(piwo);
                 DisplayAlert("Dodano piwo", $"piwo o nazwie {piwo.NazwaPiwa} wyprodukowane w browarze {piwo.Browar.NazwaBrowaru} gatunku {piwo.Gatunek.NazwaGatunku} ", "ok");
             }

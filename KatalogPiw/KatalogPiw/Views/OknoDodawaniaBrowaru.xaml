@@ -9,6 +9,23 @@
             <Entry x:Name="NazwaBrowaru" WidthRequest="150"/>
 
             <Button x:Name="btn" Clicked="buttonZapiszBrowar_Click" Text="Zapisz Browar" FontSize="14" BorderColor="Black" MinimumWidthRequest="25" MinimumHeightRequest="50"/>
+            <Label Text="Browary" FontSize="20"/>
+            <ListView x:Name="ListaBrowarow" ItemsSource="{Binding BrowarList}"  ItemTapped="Handle_ItemTapped" CachingStrategy="RecycleElement" MinimumHeightRequest="30" MinimumWidthRequest="30">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout Padding="10">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="{Binding NazwaBrowaru} " FontAttributes="Bold"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
+        
     </ContentPage.Content>
 </ContentPage>
