@@ -12,8 +12,11 @@ namespace KatalogPiw.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class OknoDodawaniaGatunku : ContentPage
     {
+        ViewModels.DodawanieGatunkuViewModel vm;
         public OknoDodawaniaGatunku()
         {
+            vm = new ViewModels.DodawanieGatunkuViewModel();
+            BindingContext = vm;
             InitializeComponent();
         }
 
@@ -26,11 +29,23 @@ namespace KatalogPiw.Views
             }
             else
             {
-                Models.Gatunek gatunek = new Models.Gatunek();
-                gatunek.NazwaGatunku = NazwaGatunku.Text;
-                MainPage.ListaGatunkow.Add(gatunek);
-                DisplayAlert("", "Dodano nowy gatunek", "OK");
+                //Models.Gatunek gatunek = new Models.Gatunek();
+                //gatunek.NazwaGatunku = NazwaGatunku.Text;
+                //MainPage.ListaGatunkow.Add(gatunek);
+                //DisplayAlert("", "Dodano nowy gatunek", "OK");
+                string Nazwa = NazwaGatunku.Text;
+                vm.DodajGatunek(Nazwa);
             }
+        }
+        async void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            //    if (e.Item == null)
+            //        return;
+
+            //    await DisplayAlert("Item Tapped", "An item was tapped.", "OK");
+
+            //    //Deselect Item
+            //    ((ListView)sender).SelectedItem = null;
         }
     }
 }

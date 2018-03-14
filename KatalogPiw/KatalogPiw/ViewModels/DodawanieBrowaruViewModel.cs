@@ -39,10 +39,10 @@ namespace KatalogPiw.ViewModels
        
 
 
-        public void DodajBrowar(Browar browar)
+        public void DodajBrowar(string NazwaBrowaru)
         {
-            //var browar = new Browar();
-            //browar.NazwaBrowaru = nazwa;
+            Browar browar = new Browar();
+            browar.NazwaBrowaru = NazwaBrowaru;
             _browarList.Add(browar);
             notifyCollectionChanged(new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Add, browar));
 

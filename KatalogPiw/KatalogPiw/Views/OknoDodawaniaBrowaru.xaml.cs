@@ -29,9 +29,8 @@ namespace KatalogPiw.Views
             else
             {
                 string Nazwa = NazwaBrowaru.Text;
-                Models.Browar browar = new Models.Browar();
-                browar.NazwaBrowaru = Nazwa;
-                vm.DodajBrowar(browar);
+
+                vm.DodajBrowar(Nazwa);
                 //Models.Browar browar = new Models.Browar();
                 //browar.NazwaBrowaru = NazwaBrowaru.Text;
                 //MainPage.ListaBrowarow.Add(browar);
