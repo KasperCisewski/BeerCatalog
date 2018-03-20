@@ -21,17 +21,17 @@ namespace KatalogPiw.ViewModels
         public DodawanieGatunkuViewModel()
         {
             _gatunkiList = new ObservableCollection<Gatunek>();
+
         }
 
         public void DodajGatunek(string NazwaGatunku)
         {
             Gatunek gatunek = new Gatunek();
             gatunek.NazwaGatunku = NazwaGatunku;
-
             _gatunkiList.Add(gatunek);
+            KatalogPiw.App.Database.SaveGatunek(gatunek);
             notifyCollectionChanged(new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Add, gatunek));
 
-            Views.MainPage.ListaGatunkow.Add(gatunek);
         }
 
         public event NotifyCollectionChangedEventHandler CollectionChanged;

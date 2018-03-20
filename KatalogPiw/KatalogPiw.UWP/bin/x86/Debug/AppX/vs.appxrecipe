@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\Pc\source\repos\KatalogPiw\KatalogPiw\KatalogPiw.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-03-11T14:47:31.352</Modified>
+      <Modified>2018-03-20T21:58:37.061</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Pc\source\repos\KatalogPiw\KatalogPiw\KatalogPiw.UWP\bin\x86\Debug\KatalogPiw.UWP.exe">
       <PackagePath>entrypoint\KatalogPiw.UWP.exe</PackagePath>
-      <Modified>2018-03-11T14:47:30.155</Modified>
+      <Modified>2018-03-20T21:58:35.380</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Pc\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.1\runtimes\win10-x86\nativeassets\uap10.0.15138\clrcompression.dll">
       <PackagePath>clrcompression.dll</PackagePath>
@@ -920,11 +920,11 @@
     <AppxPackagedFile Include="C:\Users\Pc\source\repos\KatalogPiw\KatalogPiw\KatalogPiw.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-03-11T14:47:30.939</Modified>
+      <Modified>2018-03-20T21:58:36.481</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Pc\source\repos\KatalogPiw\KatalogPiw\KatalogPiw.UWP\bin\x86\Debug\Core\KatalogPiw.UWP.exe">
       <PackagePath>KatalogPiw.UWP.exe</PackagePath>
-      <Modified>2018-03-11T14:47:31.343</Modified>
+      <Modified>2018-03-20T21:58:37.048</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

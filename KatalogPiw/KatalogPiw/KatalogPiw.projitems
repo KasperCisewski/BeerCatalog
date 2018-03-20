@@ -18,10 +18,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\Beer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Browar.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Gatunek.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\DatabaseConnection.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\IDatabaseConnection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\BeerDatabase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\ISave.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\ISaveImage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\ISQLite.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DodawanieBrowaruViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DodawanieGatunkuViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DodawaniePiwaViewModel.cs" />

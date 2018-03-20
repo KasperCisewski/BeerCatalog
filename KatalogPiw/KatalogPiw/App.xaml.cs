@@ -1,5 +1,5 @@
 ﻿using System;
-
+using KatalogPiw.Services;
 using KatalogPiw.Views;
 using Xamarin.Forms;
 
@@ -14,6 +14,20 @@ namespace KatalogPiw
 
 
             MainPage = new MainPage();
+        }
+
+        static BeerDatabase database;
+
+        public static BeerDatabase Database
+        {
+            get
+            {
+                if(database==null)
+                {
+                    database = new BeerDatabase();
+                }
+                return database;
+            }
         }
 
 		protected override void OnStart ()

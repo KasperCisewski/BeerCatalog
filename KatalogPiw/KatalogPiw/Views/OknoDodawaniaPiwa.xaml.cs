@@ -12,11 +12,12 @@ namespace KatalogPiw.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class OknoDodawaniaPiwa : ContentPage
 	{
-      
+
         ViewModels.DodawaniePiwaViewModel vm;
         public OknoDodawaniaPiwa ()
 		{
             vm = new ViewModels.DodawaniePiwaViewModel();
+
             BindingContext = vm;
             InitializeComponent();
         }
@@ -37,14 +38,10 @@ namespace KatalogPiw.Views
             }
             else
             {
-                //Models.Beer piwo = new Models.Beer();
-                //piwo.Id = MainPage.ListaPiw.Count()+1;
-                //piwo.NazwaPiwa = NazwaPiwa.Text;
-                //piwo.Browar = (Models.Browar)BrowarPicker.SelectedItem;
-                //piwo.Gatunek = (Models.Gatunek)GatunekPicker.SelectedItem;
-                Models.Beer piwo = new Models.Beer(MainPage.ListaPiw.Count + 1, NazwaPiwa.Text, (Models.Browar)BrowarPicker.SelectedItem, Convert.ToDouble(CenaNettoBR.Text), Convert.ToDouble(CenaNettoR.Text), (Models.Gatunek)GatunekPicker.SelectedItem, Parametry.Text, Opis.Text, FoodParing.Text);
-                MainPage.ListaPiw.Add(piwo);
-                DisplayAlert("Dodano piwo", $"piwo o nazwie {piwo.NazwaPiwa} wyprodukowane w browarze {piwo.Browar.NazwaBrowaru} gatunku {piwo.Gatunek.NazwaGatunku} ", "ok");
+                double cenaNettoBezRabatu = Convert.ToDouble(CenaNettoBR.Text);
+                double cenaNettoZRabatem = Convert.ToDouble(CenaNettoR.Text);
+                vm.DodajPiwo(NazwaPiwa.Text, (Models.Browar)BrowarPicker.SelectedItem, cenaNettoBezRabatu, cenaNettoZRabatem, (Models.Gatunek)GatunekPicker.SelectedItem, Parametry.Text, Opis.Text, FoodParing.Text);
+                //DisplayAlert("Dodano piwo", $"piwo o nazwie {piwo.NazwaPiwa} wyprodukowane w browarze {piwo.Browar.NazwaBrowaru} gatunku {piwo.Gatunek.NazwaGatunku} ", "ok");
             }
         }
         private async void buttonPokazListe_Click(object sender,TextChangedEventArgs e)

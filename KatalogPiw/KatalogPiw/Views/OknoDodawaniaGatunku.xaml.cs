@@ -29,10 +29,6 @@ namespace KatalogPiw.Views
             }
             else
             {
-                //Models.Gatunek gatunek = new Models.Gatunek();
-                //gatunek.NazwaGatunku = NazwaGatunku.Text;
-                //MainPage.ListaGatunkow.Add(gatunek);
-                //DisplayAlert("", "Dodano nowy gatunek", "OK");
                 string Nazwa = NazwaGatunku.Text;
                 vm.DodajGatunek(Nazwa);
             }

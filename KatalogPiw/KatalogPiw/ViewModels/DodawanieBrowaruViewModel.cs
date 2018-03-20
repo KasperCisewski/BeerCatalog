@@ -16,9 +16,8 @@ namespace KatalogPiw.ViewModels
 {
     public class DodawanieBrowaruViewModel:INotifyCollectionChanged 
     {
-        //    public ObservableCollection<Browar> BrowarList { get; set; }
         private readonly ObservableCollection<Browar> _browarList;
-        public ObservableCollection<Browar> BrowarList
+        public  ObservableCollection<Browar> BrowarList
         {
             get { return _browarList; }
            
@@ -27,26 +26,16 @@ namespace KatalogPiw.ViewModels
         public DodawanieBrowaruViewModel()
         {
             _browarList = new ObservableCollection<Browar>();
-           // _browarList.CollectionChanged += BrowarList_CollectionChanged;
 
         }
-
-        private void BrowarList_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
-        {
-
-        }
-
-       
-
-
+     
         public void DodajBrowar(string NazwaBrowaru)
         {
             Browar browar = new Browar();
             browar.NazwaBrowaru = NazwaBrowaru;
             _browarList.Add(browar);
+            App.Database.SaveBrowar(browar);
             notifyCollectionChanged(new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Add, browar));
-
-            Views.MainPage.ListaBrowarow.Add(browar);
         }
 
         public event NotifyCollectionChangedEventHandler CollectionChanged;
@@ -58,8 +47,5 @@ namespace KatalogPiw.ViewModels
                 CollectionChanged(this, args);
             }
         }
-
-
-
     }
 }

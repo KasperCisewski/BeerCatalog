@@ -5,9 +5,13 @@ using SQLite;
 
 namespace KatalogPiw.Models
 {
+
     public class Browar
     {
-        [PrimaryKey, NotNull]
+        [PrimaryKeyAttribute, AutoIncrement]
+        public int BrowarID { get; set; }
         public string NazwaBrowaru { get; set; }
+
+
     }
 }

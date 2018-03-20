@@ -32,48 +32,6 @@ namespace KatalogPiw.Views
             InitializeComponent();
         }
 
-        void sa()
-        {
-            //Create a new document
-
-            PdfDocument document = new PdfDocument();
-
-            //Add a page
-
-            PdfPage page = document.Pages.Add();
-
-            //Create Pdf graphics for the page
-
-            PdfGraphics graphics = page.Graphics;
-
-            //Create a solid brush
-
-            PdfBrush brush = new PdfSolidBrush(Syncfusion.Drawing.Color.FromArgb(255, 0, 0, 0));
-
-            //Set the font
-
-            PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 36);
-
-            //Draw the text
-
-            graphics.DrawString("Hello world!", font, brush, new PointF(20, 20));
-
-            //create the stream
-
-            MemoryStream memoryStream = new MemoryStream();
-
-            //save the document into stream
-
-            document.Save(memoryStream);
-
-
-            //close the document
-
-
-            // Xamarin.Forms.DependencyService.Get<ISave>().Save("Output.pdf", "application/pdf", stream);
-            document.Close(true);
-        }
-
         private async void buttonGenerujStrone_Click(object sender, TextChangedEventArgs e)
         {
             PdfDocument doc = new PdfDocument();
@@ -131,8 +89,8 @@ namespace KatalogPiw.Views
                 pdfGridRow.Cells[0].Value = (i + 1).ToString();
                 pdfGridRow.Cells[1].Value = MainPage.ListaPiw[i].NazwaPiwa;
                 pdfGridRow.Cells[2].Value = MainPage.ListaPiw[i].Browar.NazwaBrowaru;
-                pdfGridRow.Cells[3].Value = MainPage.ListaPiw[i].CenaNettoBezRabatu;
-                pdfGridRow.Cells[4].Value = MainPage.ListaPiw[i].CenaNettoZRabatem;
+                pdfGridRow.Cells[3].Value = MainPage.ListaPiw[i].CenaNettoBezRabatu.ToString();
+                pdfGridRow.Cells[4].Value = MainPage.ListaPiw[i].CenaNettoZRabatem.ToString();
                 pdfGridRow.Cells[5].Value = MainPage.ListaPiw[i].Gatunek.NazwaGatunku;
                 pdfGridRow.Cells[6].Value = MainPage.ListaPiw[i].Parametry;
                 pdfGridRow.Cells[7].Value = MainPage.ListaPiw[i].Opis;
@@ -160,15 +118,7 @@ namespace KatalogPiw.Views
             doc.Close(true);
 
 
-
-
         }
-
-
-
-
-
-
 
         async void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
         {

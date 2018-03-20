@@ -12,7 +12,7 @@ namespace KatalogPiw.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class OknoDodawaniaBrowaru : ContentPage
     {
-        ViewModels.DodawanieBrowaruViewModel vm;
+        public ViewModels.DodawanieBrowaruViewModel vm;
         public OknoDodawaniaBrowaru()
         {
              vm = new ViewModels.DodawanieBrowaruViewModel();
@@ -29,12 +29,7 @@ namespace KatalogPiw.Views
             else
             {
                 string Nazwa = NazwaBrowaru.Text;
-
                 vm.DodajBrowar(Nazwa);
-                //Models.Browar browar = new Models.Browar();
-                //browar.NazwaBrowaru = NazwaBrowaru.Text;
-                //MainPage.ListaBrowarow.Add(browar);
-                //DisplayAlert("", "Dodano nowy browar", "OK");
             }
         }
 

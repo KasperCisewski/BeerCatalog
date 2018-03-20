@@ -9,7 +9,8 @@ namespace KatalogPiw.Models
     public class Gatunek
     {
 
-        [PrimaryKey, NotNull]
+        [PrimaryKeyAttribute, AutoIncrement]
+        public int GatunekID { get; set; }
         public string NazwaGatunku { get; set; }
 
     }
