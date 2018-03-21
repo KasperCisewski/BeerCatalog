@@ -19,6 +19,8 @@ namespace KatalogPiw.Services
             database.CreateTable<Browar>();
 
             database.CreateTable<Gatunek>();
+            database.CreateTable<Beer>();
+
         }
         public int SaveBeer(Beer beer)
         {
@@ -83,6 +85,14 @@ namespace KatalogPiw.Services
             lock(locker)
             {
                 return (from c in database.Table<Browar>() select c).ToList();
+            }
+        }
+
+        public List<Beer> GetPiwa()
+        {
+            lock(locker)
+            {
+                return(from c in database.Table<Beer>() select c).ToList();
             }
         }
     }

@@ -37,13 +37,17 @@ namespace KatalogPiw.ViewModels
 
             Gatunki = new List<Gatunek>();
             Gatunki = App.Database.GetGatunki();
+            
+
+            
 
         }
 
         public void DodajPiwo(string nazwaPiwa, Models.Browar browar,double cenaNettoBR,double cenaNettoR,Models.Gatunek gatunek,string parametry,string opis,string foodParing)
         {
-
-            Models.Beer beer = new Models.Beer(Views.MainPage.ListaPiw.Count+1,nazwaPiwa,browar,cenaNettoBR,cenaNettoR,gatunek,parametry,opis,foodParing);
+            Models.Beer beer = new Models.Beer(nazwaPiwa,browar,cenaNettoBR,cenaNettoR,gatunek,parametry,opis,foodParing);
+            beer.Browary = App.Database.GetBrowary();
+            beer.Gatunki = App.Database.GetGatunki();
             _piwaList.Add(beer);
             KatalogPiw.App.Database.SaveBeer(beer);
             notifyCollectionChanged(new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Add, beer));

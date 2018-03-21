@@ -117,10 +117,20 @@
           "System.Xml.XDocument": "4.0.11"
         }
       },
-      "sqlite-net-pcl/1.4.118": {
+      "Newtonsoft.Json/9.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
+        }
+      },
+      "sqlite-net-pcl/1.3.1": {
         "type": "package",
         "dependencies": {
-          "SQLitePCLRaw.bundle_green": "1.1.5"
+          "NETStandard.Library": "1.6.0",
+          "SQLitePCLRaw.bundle_green": "1.1.2"
         },
         "compile": {
           "lib/netstandard1.1/SQLite-net.dll": {}
@@ -129,12 +139,25 @@
           "lib/netstandard1.1/SQLite-net.dll": {}
         }
       },
-      "SQLitePCLRaw.bundle_green/1.1.5": {
+      "SQLiteNetExtensions/2.0.0": {
         "type": "package",
         "dependencies": {
-          "SQLitePCLRaw.core": "1.1.5",
-          "SQLitePCLRaw.lib.e_sqlite3.android": "1.1.5",
-          "SQLitePCLRaw.provider.e_sqlite3.android": "1.1.5"
+          "Newtonsoft.Json": "9.0.1",
+          "sqlite-net-pcl": "1.4.118"
+        },
+        "compile": {
+          "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/SQLiteNetExtensions.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/SQLiteNetExtensions.dll": {}
+        }
+      },
+      "SQLitePCLRaw.bundle_green/1.1.2": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "1.1.2",
+          "SQLitePCLRaw.lib.e_sqlite3.android": "1.1.2",
+          "SQLitePCLRaw.provider.e_sqlite3.android": "1.1.2"
         },
         "compile": {
           "lib/MonoAndroid/SQLitePCLRaw.batteries_green.dll": {},
@@ -145,7 +168,7 @@
           "lib/MonoAndroid/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
-      "SQLitePCLRaw.core/1.1.5": {
+      "SQLitePCLRaw.core/1.1.2": {
         "type": "package",
         "compile": {
           "lib/MonoAndroid/SQLitePCLRaw.core.dll": {}
@@ -154,7 +177,7 @@
           "lib/MonoAndroid/SQLitePCLRaw.core.dll": {}
         }
       },
-      "SQLitePCLRaw.lib.e_sqlite3.android/1.1.5": {
+      "SQLitePCLRaw.lib.e_sqlite3.android/1.1.2": {
         "type": "package",
         "compile": {
           "lib/MonoAndroid/SQLitePCLRaw.lib.e_sqlite3.dll": {}
@@ -163,10 +186,10 @@
           "lib/MonoAndroid/SQLitePCLRaw.lib.e_sqlite3.dll": {}
         }
       },
-      "SQLitePCLRaw.provider.e_sqlite3.android/1.1.5": {
+      "SQLitePCLRaw.provider.e_sqlite3.android/1.1.2": {
         "type": "package",
         "dependencies": {
-          "SQLitePCLRaw.core": "1.1.5"
+          "SQLitePCLRaw.core": "1.1.2"
         },
         "compile": {
           "lib/MonoAndroid/SQLitePCLRaw.provider.e_sqlite3.dll": {}
@@ -1123,26 +1146,76 @@
         "netstandard.library.nuspec"
       ]
     },
-    "sqlite-net-pcl/1.4.118": {
-      "sha512": "66wl2z26PpA/m+hY2UJudsHF3GpbbC8Scx9WvXC0MomQxrbclkb2jiavYsXH3AEXHsTAjKIWavmwKoRIPWsdAg==",
+    "Newtonsoft.Json/9.0.1": {
+      "sha512": "U82mHQSKaIk+lpSVCbWYKNavmNH1i5xrExDEquU1i6I5pV6UMOqRnJRSlKO3cMPfcpp0RgDY+8jUXHdQ4IfXvw==",
       "type": "package",
-      "path": "sqlite-net-pcl/1.4.118",
+      "path": "newtonsoft.json/9.0.1",
       "files": [
-        "lib/netstandard1.1/SQLite-net.deps.json",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.9.0.1.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "tools/install.ps1"
+      ]
+    },
+    "sqlite-net-pcl/1.3.1": {
+      "sha512": "YVqyIbWN4J1f7kYIJt3sHtnXw51MifWAsVSiMxDpexfzJuBR2QUmiqxxMlaV5IpFl9Nwgm9QICaNNSyNiEmGvA==",
+      "type": "package",
+      "path": "sqlite-net-pcl/1.3.1",
+      "files": [
         "lib/netstandard1.1/SQLite-net.dll",
-        "lib/netstandard1.1/SQLite-net.pdb",
+        "lib/netstandard1.1/SQLite-net.dll.mdb",
         "lib/netstandard1.1/SQLite-net.xml",
         "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLite-net.dll",
-        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLite-net.pdb",
+        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLite-net.dll.mdb",
         "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLite-net.xml",
-        "sqlite-net-pcl.1.4.118.nupkg.sha512",
+        "sqlite-net-pcl.1.3.1.nupkg.sha512",
         "sqlite-net-pcl.nuspec"
       ]
     },
-    "SQLitePCLRaw.bundle_green/1.1.5": {
-      "sha512": "rz+SPgp57CAWkEfCJmWqHXMd+fSqhgYmzOdjkSbCQ3OEG0I3+vUlycElvy5zTi0GAYg5pVrmRqbquotS0985CQ==",
+    "SQLiteNetExtensions/2.0.0": {
+      "sha512": "wwLvVi4RyNu9VWFwgiKQOaHtzFpTmt2RE7WHz5EKABopbe6NW+jQF7rwKbtoNK+mQHqxqOwlNP9dDGjz89fFAQ==",
       "type": "package",
-      "path": "sqlitepclraw.bundle_green/1.1.5",
+      "path": "sqlitenetextensions/2.0.0",
+      "files": [
+        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/SQLiteNetExtensions.dll",
+        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/SQLiteNetExtensions.pdb",
+        "sqlitenetextensions.2.0.0.nupkg.sha512",
+        "sqlitenetextensions.nuspec",
+        "src/SQLiteNetExtensions/Attributes/CascadeOperation.cs",
+        "src/SQLiteNetExtensions/Attributes/ForeignKeyAttribute.cs",
+        "src/SQLiteNetExtensions/Attributes/ManyToManyAttribute.cs",
+        "src/SQLiteNetExtensions/Attributes/ManyToOneAttribute.cs",
+        "src/SQLiteNetExtensions/Attributes/OneToManyAttribute.cs",
+        "src/SQLiteNetExtensions/Attributes/OneToOneAttribute.cs",
+        "src/SQLiteNetExtensions/Attributes/RelationshipAttribute.cs",
+        "src/SQLiteNetExtensions/Attributes/TextBlobAttribute.cs",
+        "src/SQLiteNetExtensions/Exceptions/IncorrectRelationshipException.cs",
+        "src/SQLiteNetExtensions/Extensions/ReadOperations.cs",
+        "src/SQLiteNetExtensions/Extensions/ReflectionExtensions.cs",
+        "src/SQLiteNetExtensions/Extensions/TextBlob/ITextBlobSerializer.cs",
+        "src/SQLiteNetExtensions/Extensions/TextBlob/Serializers/JsonBlobSerializer.cs",
+        "src/SQLiteNetExtensions/Extensions/TextBlob/TextBlobOperations.cs",
+        "src/SQLiteNetExtensions/Extensions/WriteOperations.cs",
+        "src/SQLiteNetExtensions/Properties/AssemblyInfo.cs"
+      ]
+    },
+    "SQLitePCLRaw.bundle_green/1.1.2": {
+      "sha512": "i7ZcVmz1CY9/Un9GrnZWtbou9va7ho54Bx9V7H59CxERCq9IJ10164rY8sg2uLGtiJY3AhWdtrA045QTlETmhA==",
+      "type": "package",
+      "path": "sqlitepclraw.bundle_green/1.1.2",
       "files": [
         "build/wp8/SQLitePCLRaw.bundle_green.targets",
         "build/wp80/arm/SQLitePCLRaw.batteries_green.dll",
@@ -1180,14 +1253,14 @@
         "lib/wp8/_._",
         "lib/wpa81/SQLitePCLRaw.batteries_green.dll",
         "lib/wpa81/SQLitePCLRaw.batteries_v2.dll",
-        "sqlitepclraw.bundle_green.1.1.5.nupkg.sha512",
+        "sqlitepclraw.bundle_green.1.1.2.nupkg.sha512",
         "sqlitepclraw.bundle_green.nuspec"
       ]
     },
-    "SQLitePCLRaw.core/1.1.5": {
-      "sha512": "NViT1KDYnPAQo7yoYmkAMWzT15ZjqbLTSZp9iTVwZDz7fBC5fQ9TYebOFUIxYxrD/RvBpYB8m9PtcL8x/QbKNg==",
+    "SQLitePCLRaw.core/1.1.2": {
+      "sha512": "Hll9I6i6c9h+8gW250qGssQh/4l7AQEhSzK0TXSVju5utgXV6ruupaiGr/3MFdwGIDH8QyVxXz22/esZ8A6CMw==",
       "type": "package",
-      "path": "sqlitepclraw.core/1.1.5",
+      "path": "sqlitepclraw.core/1.1.2",
       "files": [
         "lib/MonoAndroid/SQLitePCLRaw.core.dll",
         "lib/Xamarin.Mac20/SQLitePCLRaw.core.dll",
@@ -1204,27 +1277,27 @@
         "lib/win8/SQLitePCLRaw.core.dll",
         "lib/win81/SQLitePCLRaw.core.dll",
         "lib/wpa81/SQLitePCLRaw.core.dll",
-        "sqlitepclraw.core.1.1.5.nupkg.sha512",
+        "sqlitepclraw.core.1.1.2.nupkg.sha512",
         "sqlitepclraw.core.nuspec"
       ]
     },
-    "SQLitePCLRaw.lib.e_sqlite3.android/1.1.5": {
-      "sha512": "Qn3V9pB6n23wj0QNOWPvlQyRse40bXskbFfOI/1DiOhxsI3dX5xhtVC38fvd4BBo5k+JeW3ShqqCvC6SM8hiug==",
+    "SQLitePCLRaw.lib.e_sqlite3.android/1.1.2": {
+      "sha512": "dOcr0/EkdcRdLeq8puvfHswDvy1ltdMbL1neOSTL/3hZEz8sHKrb/gK5K0ERESuz/i8WnpZa3WbNPs7mpWxyGQ==",
       "type": "package",
-      "path": "sqlitepclraw.lib.e_sqlite3.android/1.1.5",
+      "path": "sqlitepclraw.lib.e_sqlite3.android/1.1.2",
       "files": [
         "lib/MonoAndroid/SQLitePCLRaw.lib.e_sqlite3.dll",
-        "sqlitepclraw.lib.e_sqlite3.android.1.1.5.nupkg.sha512",
+        "sqlitepclraw.lib.e_sqlite3.android.1.1.2.nupkg.sha512",
         "sqlitepclraw.lib.e_sqlite3.android.nuspec"
       ]
     },
-    "SQLitePCLRaw.provider.e_sqlite3.android/1.1.5": {
-      "sha512": "C8qQ2anwnJomTNtIs8ItYgHg1KDepxHV5E89d4zkh4vWeGWv5nUm1cknuh7xTZTbet3CNQa6qfRTZIolf0p6+w==",
+    "SQLitePCLRaw.provider.e_sqlite3.android/1.1.2": {
+      "sha512": "UTdTa+QmxBW5uQp5JB8U/qVoyudHleXeA35kQZnEvwCTF3e+69UXKtGxf5GwSZukaUrvrkzNozcFznDteNLArA==",
       "type": "package",
-      "path": "sqlitepclraw.provider.e_sqlite3.android/1.1.5",
+      "path": "sqlitepclraw.provider.e_sqlite3.android/1.1.2",
       "files": [
         "lib/MonoAndroid/SQLitePCLRaw.provider.e_sqlite3.dll",
-        "sqlitepclraw.provider.e_sqlite3.android.1.1.5.nupkg.sha512",
+        "sqlitepclraw.provider.e_sqlite3.android.1.1.2.nupkg.sha512",
         "sqlitepclraw.provider.e_sqlite3.android.nuspec"
       ]
     },
@@ -4184,6 +4257,7 @@
   },
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v7.1": [
+      "SQLiteNetExtensions >= 2.0.0",
       "Syncfusion.Compression.Portable >= 15.2120.0.46",
       "Syncfusion.Xamarin.Pdf >= 16.1.0.26",
       "Xamarin.Android.Support.Design >= 25.4.0.2",
@@ -4192,7 +4266,7 @@
       "Xamarin.Android.Support.v7.CardView >= 25.4.0.2",
       "Xamarin.Android.Support.v7.MediaRouter >= 25.4.0.2",
       "Xamarin.Forms >= 2.5.0.122203",
-      "sqlite-net-pcl >= 1.4.118"
+      "sqlite-net-pcl >= 1.3.1"
     ]
   },
   "packageFolders": {
@@ -4233,6 +4307,10 @@
     "frameworks": {
       "monoandroid71": {
         "dependencies": {
+          "SQLiteNetExtensions": {
+            "target": "Package",
+            "version": "[2.0.0, )"
+          },
           "Syncfusion.Compression.Portable": {
             "target": "Package",
             "version": "[15.2120.0.46, )"
@@ -4267,10 +4345,22 @@
           },
           "sqlite-net-pcl": {
             "target": "Package",
-            "version": "[1.4.118, )"
+            "version": "[1.3.1, )"
           }
         }
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Wykryto obniżenie wersji pakietu: sqlite-net-pcl z 1.4.118 na 1.3.1. Aby wybrać inną wersję, odwołaj się do pakietu bezpośrednio z projektu. \r\n KatalogPiw.Android -> SQLiteNetExtensions 2.0.0 -> sqlite-net-pcl (>= 1.4.118) \r\n KatalogPiw.Android -> sqlite-net-pcl (>= 1.3.1)",
+      "libraryId": "sqlite-net-pcl",
+      "targetGraphs": [
+        "MonoAndroid,Version=v7.1"
+      ]
+    }
+  ]
 }

@@ -88,10 +88,10 @@ namespace KatalogPiw.Views
                 PdfGridRow pdfGridRow = pdfGrid.Rows.Add();
                 pdfGridRow.Cells[0].Value = (i + 1).ToString();
                 pdfGridRow.Cells[1].Value = MainPage.ListaPiw[i].NazwaPiwa;
-                pdfGridRow.Cells[2].Value = MainPage.ListaPiw[i].Browar.NazwaBrowaru;
+                pdfGridRow.Cells[2].Value = MainPage.ListaPiw[i].Browary[MainPage.ListaPiw[i].BrowarID-1].NazwaBrowaru;
                 pdfGridRow.Cells[3].Value = MainPage.ListaPiw[i].CenaNettoBezRabatu.ToString();
                 pdfGridRow.Cells[4].Value = MainPage.ListaPiw[i].CenaNettoZRabatem.ToString();
-                pdfGridRow.Cells[5].Value = MainPage.ListaPiw[i].Gatunek.NazwaGatunku;
+                pdfGridRow.Cells[5].Value = MainPage.ListaPiw[i].Gatunki[MainPage.ListaPiw[i].GatunekID-1].NazwaGatunku;
                 pdfGridRow.Cells[6].Value = MainPage.ListaPiw[i].Parametry;
                 pdfGridRow.Cells[7].Value = MainPage.ListaPiw[i].Opis;
                 pdfGridRow.Cells[8].Value = MainPage.ListaPiw[i].FoodParing;

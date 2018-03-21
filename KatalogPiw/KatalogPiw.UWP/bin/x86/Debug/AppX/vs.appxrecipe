@@ -31,13 +31,77 @@
     <AppXManifest Include="C:\Users\Pc\source\repos\KatalogPiw\KatalogPiw\KatalogPiw.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-03-20T21:58:37.061</Modified>
+      <Modified>2018-03-21T22:26:20.908</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Pc\source\repos\KatalogPiw\KatalogPiw\KatalogPiw.UWP\bin\x86\Debug\KatalogPiw.UWP.exe">
       <PackagePath>entrypoint\KatalogPiw.UWP.exe</PackagePath>
-      <Modified>2018-03-20T21:58:35.380</Modified>
+      <Modified>2018-03-21T22:26:19.498</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Pc\.nuget\packages\microsoft.entityframeworkcore\2.0.2\lib\netstandard2.0\Microsoft.EntityFrameworkCore.dll">
+      <PackagePath>Microsoft.EntityFrameworkCore.dll</PackagePath>
+      <Modified>2018-02-20T19:41:26.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Pc\.nuget\packages\microsoft.entityframeworkcore.relational\2.0.2\lib\netstandard2.0\Microsoft.EntityFrameworkCore.Relational.dll">
+      <PackagePath>Microsoft.EntityFrameworkCore.Relational.dll</PackagePath>
+      <Modified>2018-02-20T19:41:26.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Pc\.nuget\packages\microsoft.entityframeworkcore.sqlserver\2.0.2\lib\netstandard2.0\Microsoft.EntityFrameworkCore.SqlServer.dll">
+      <PackagePath>Microsoft.EntityFrameworkCore.SqlServer.dll</PackagePath>
+      <Modified>2018-02-20T19:41:26.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Pc\.nuget\packages\microsoft.extensions.caching.abstractions\2.0.1\lib\netstandard2.0\Microsoft.Extensions.Caching.Abstractions.dll">
+      <PackagePath>Microsoft.Extensions.Caching.Abstractions.dll</PackagePath>
+      <Modified>2018-02-20T19:41:26.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Pc\.nuget\packages\microsoft.extensions.caching.memory\2.0.1\lib\netstandard2.0\Microsoft.Extensions.Caching.Memory.dll">
+      <PackagePath>Microsoft.Extensions.Caching.Memory.dll</PackagePath>
+      <Modified>2018-02-20T19:41:26.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Pc\.nuget\packages\microsoft.extensions.configuration.abstractions\2.0.1\lib\netstandard2.0\Microsoft.Extensions.Configuration.Abstractions.dll">
+      <PackagePath>Microsoft.Extensions.Configuration.Abstractions.dll</PackagePath>
+      <Modified>2018-02-20T19:41:26.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Pc\.nuget\packages\microsoft.extensions.dependencyinjection\2.0.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.dll">
+      <PackagePath>Microsoft.Extensions.DependencyInjection.dll</PackagePath>
+      <Modified>2017-07-24T22:48:04.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Pc\.nuget\packages\microsoft.extensions.dependencyinjection.abstractions\2.0.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll">
+      <PackagePath>Microsoft.Extensions.DependencyInjection.Abstractions.dll</PackagePath>
+      <Modified>2017-07-24T22:48:04.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Pc\.nuget\packages\microsoft.extensions.logging\2.0.1\lib\netstandard2.0\Microsoft.Extensions.Logging.dll">
+      <PackagePath>Microsoft.Extensions.Logging.dll</PackagePath>
+      <Modified>2018-02-20T19:41:26.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Pc\.nuget\packages\microsoft.extensions.logging.abstractions\2.0.1\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll">
+      <PackagePath>Microsoft.Extensions.Logging.Abstractions.dll</PackagePath>
+      <Modified>2018-02-20T19:41:26.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Pc\.nuget\packages\microsoft.extensions.options\2.0.1\lib\netstandard2.0\Microsoft.Extensions.Options.dll">
+      <PackagePath>Microsoft.Extensions.Options.dll</PackagePath>
+      <Modified>2018-02-20T19:41:26.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Pc\.nuget\packages\microsoft.extensions.primitives\2.0.0\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll">
+      <PackagePath>Microsoft.Extensions.Primitives.dll</PackagePath>
+      <Modified>2017-07-24T22:48:04.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Pc\.nuget\packages\microsoft.win32.registry\4.4.0\runtimes\win\lib\netstandard1.3\Microsoft.Win32.Registry.dll">
+      <PackagePath>Microsoft.Win32.Registry.dll</PackagePath>
+      <Modified>2017-07-19T08:01:30.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Pc\.nuget\packages\newtonsoft.json\9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
+      <Modified>2016-06-13T21:06:14.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Pc\.nuget\packages\remotion.linq\2.1.1\lib\portable-net45+win+wpa81+wp80\Remotion.Linq.dll">
+      <PackagePath>Remotion.Linq.dll</PackagePath>
+      <Modified>2016-06-14T21:16:48.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Pc\.nuget\packages\runtime.win-x86.runtime.native.system.data.sqlclient.sni\4.4.0\runtimes\win-x86\native\sni.dll">
+      <PackagePath>sni.dll</PackagePath>
+      <Modified>2017-07-12T09:24:22.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Pc\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.1\runtimes\win10-x86\nativeassets\uap10.0.15138\clrcompression.dll">
       <PackagePath>clrcompression.dll</PackagePath>
@@ -699,29 +763,33 @@
       <PackagePath>clrjit.dll</PackagePath>
       <Modified>2016-06-13T16:27:02.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Pc\.nuget\packages\sqlite-net-pcl\1.4.118\lib\netstandard1.1\SQLite-net.dll">
+    <AppxPackagedFile Include="C:\Users\Pc\.nuget\packages\sqlite-net-pcl\1.5.166-beta\lib\netstandard1.1\SQLite-net.dll">
       <PackagePath>SQLite-net.dll</PackagePath>
-      <Modified>2017-07-27T14:44:06.000</Modified>
+      <Modified>2017-08-12T09:32:56.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Pc\.nuget\packages\sqlitepclraw.bundle_green\1.1.5\lib\uap10.0\SQLitePCLRaw.batteries_green.dll">
+    <AppxPackagedFile Include="C:\Users\Pc\.nuget\packages\sqlitenetextensions\2.0.0\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\SQLiteNetExtensions.dll">
+      <PackagePath>SQLiteNetExtensions.dll</PackagePath>
+      <Modified>2017-11-30T23:07:32.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Pc\.nuget\packages\sqlitepclraw.bundle_green\1.1.8\lib\uap10.0\SQLitePCLRaw.batteries_green.dll">
       <PackagePath>SQLitePCLRaw.batteries_green.dll</PackagePath>
-      <Modified>2017-05-01T11:27:04.000</Modified>
+      <Modified>2017-08-03T12:50:12.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Pc\.nuget\packages\sqlitepclraw.bundle_green\1.1.5\lib\uap10.0\SQLitePCLRaw.batteries_v2.dll">
+    <AppxPackagedFile Include="C:\Users\Pc\.nuget\packages\sqlitepclraw.bundle_green\1.1.8\lib\uap10.0\SQLitePCLRaw.batteries_v2.dll">
       <PackagePath>SQLitePCLRaw.batteries_v2.dll</PackagePath>
-      <Modified>2017-05-01T11:27:04.000</Modified>
+      <Modified>2017-08-03T12:50:12.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Pc\.nuget\packages\sqlitepclraw.core\1.1.5\lib\uap10.0\SQLitePCLRaw.core.dll">
+    <AppxPackagedFile Include="C:\Users\Pc\.nuget\packages\sqlitepclraw.core\1.1.8\lib\uap10.0\SQLitePCLRaw.core.dll">
       <PackagePath>SQLitePCLRaw.core.dll</PackagePath>
-      <Modified>2017-05-01T11:27:02.000</Modified>
+      <Modified>2017-08-03T12:50:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Pc\.nuget\packages\sqlitepclraw.lib.e_sqlite3.v140\1.1.5\runtimes\win10-x86\native\e_sqlite3.dll">
+    <AppxPackagedFile Include="C:\Users\Pc\.nuget\packages\sqlitepclraw.lib.e_sqlite3.v140\1.1.8\runtimes\win10-x86\native\e_sqlite3.dll">
       <PackagePath>e_sqlite3.dll</PackagePath>
-      <Modified>2017-05-01T11:27:46.000</Modified>
+      <Modified>2017-08-03T12:51:46.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Pc\.nuget\packages\sqlitepclraw.provider.e_sqlite3.uwp10\1.1.5\lib\uap10.0\SQLitePCLRaw.provider.e_sqlite3.dll">
+    <AppxPackagedFile Include="C:\Users\Pc\.nuget\packages\sqlitepclraw.provider.e_sqlite3.uwp10\1.1.8\lib\uap10.0\SQLitePCLRaw.provider.e_sqlite3.dll">
       <PackagePath>SQLitePCLRaw.provider.e_sqlite3.dll</PackagePath>
-      <Modified>2017-05-01T11:27:24.000</Modified>
+      <Modified>2017-08-03T12:51:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Pc\.nuget\packages\syncfusion.xamarin.compression\16.1.0.26\lib\uap10.0\Syncfusion.Compression.Portable.dll">
       <PackagePath>Syncfusion.Compression.Portable.dll</PackagePath>
@@ -730,6 +798,14 @@
     <AppxPackagedFile Include="C:\Users\Pc\.nuget\packages\syncfusion.xamarin.pdf\16.1.0.26\lib\uap10.0\Syncfusion.Pdf.Portable.dll">
       <PackagePath>Syncfusion.Pdf.Portable.dll</PackagePath>
       <Modified>2018-03-07T14:59:44.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Pc\.nuget\packages\system.interactive.async\3.1.1\lib\netstandard1.3\System.Interactive.Async.dll">
+      <PackagePath>System.Interactive.Async.dll</PackagePath>
+      <Modified>2016-11-21T13:05:54.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Pc\.nuget\packages\system.runtime.compilerservices.unsafe\4.4.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll">
+      <PackagePath>System.Runtime.CompilerServices.Unsafe.dll</PackagePath>
+      <Modified>2017-07-19T08:01:34.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Pc\.nuget\packages\xamarin.forms\2.5.0.122203\lib\uap10.0\Xamarin.Forms.Core.dll">
       <PackagePath>Xamarin.Forms.Core.dll</PackagePath>
@@ -920,11 +996,11 @@
     <AppxPackagedFile Include="C:\Users\Pc\source\repos\KatalogPiw\KatalogPiw\KatalogPiw.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-03-20T21:58:36.481</Modified>
+      <Modified>2018-03-21T22:26:20.413</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Pc\source\repos\KatalogPiw\KatalogPiw\KatalogPiw.UWP\bin\x86\Debug\Core\KatalogPiw.UWP.exe">
       <PackagePath>KatalogPiw.UWP.exe</PackagePath>
-      <Modified>2018-03-20T21:58:37.048</Modified>
+      <Modified>2018-03-21T22:26:20.896</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -10,9 +10,10 @@ namespace KatalogPiw.ViewModels
         public PokazListePiwViewModel()
         {
             Piwa = new List<Models.Beer>();
-            var listaPiw = new List<Models.Beer>();
-            listaPiw = Views.MainPage.ListaPiw;
-            Piwa = listaPiw;
+            //var listaPiw = new List<Models.Beer>();
+            //listaPiw = Views.MainPage.ListaPiw;
+            //Piwa = listaPiw;
+            Piwa = KatalogPiw.App.Database.GetPiwa();
 
         }
     }

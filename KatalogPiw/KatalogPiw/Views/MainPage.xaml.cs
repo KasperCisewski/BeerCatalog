@@ -9,9 +9,16 @@ namespace KatalogPiw.Views
 	public partial class MainPage : TabbedPage
 	{
 
-        public static List<Models.Beer> ListaPiw = new List<Models.Beer>();
+        public static List<Models.Beer> ListaPiw = App.Database.GetPiwa();
+        
         public MainPage ()
 		{
+            for(int i=0;i<ListaPiw.Count;i++)
+            {
+                ListaPiw[i].Browary= App.Database.GetBrowary();
+                ListaPiw[i].Gatunki= App.Database.GetGatunki();
+              
+            }
             InitializeComponent();
 		}
 	}

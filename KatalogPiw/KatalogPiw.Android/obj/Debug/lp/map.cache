@@ -26,3 +26,11 @@ System.ComponentModel
 System.Reflection.Primitives
 System.Reflection.Extensions
 System.Resources.ResourceManager
+SQLite-net
+SQLitePCLRaw.batteries_green
+SQLitePCLRaw.batteries_v2
+SQLitePCLRaw.core
+SQLitePCLRaw.lib.e_sqlite3
+SQLitePCLRaw.provider.e_sqlite3
+Newtonsoft.Json
+SQLiteNetExtensions
