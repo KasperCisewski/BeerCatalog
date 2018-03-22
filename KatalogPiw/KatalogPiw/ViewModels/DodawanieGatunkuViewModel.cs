@@ -21,6 +21,10 @@ namespace KatalogPiw.ViewModels
         public DodawanieGatunkuViewModel()
         {
             _gatunkiList = new ObservableCollection<Gatunek>();
+           for(int i=0;i<App.Database.GetGatunki().Count;i++)
+            {
+                _gatunkiList.Add(KatalogPiw.App.Database.GetGatunek(i));
+            }
 
         }
 

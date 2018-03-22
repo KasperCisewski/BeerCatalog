@@ -8,17 +8,23 @@
             <Entry x:Name="NazwaGatunku" WidthRequest="150"/>
             <Button x:Name="btn" Clicked="buttonZapiszGatunek_Click" Text="Zapisz Gatunek" FontSize="14" BorderColor="Black" MinimumWidthRequest="25" MinimumHeightRequest="50"/>
             <Label Text="Gatunki" FontSize="20"/>
-            <ListView x:Name="ListaGatunkow" ItemsSource="{Binding GatunkiList}"  ItemTapped="Handle_ItemTapped" CachingStrategy="RecycleElement" MinimumHeightRequest="30" MinimumWidthRequest="30">
+            <ListView x:Name="ListaGatunkow" ItemsSource="{Binding GatunkiList}"   CachingStrategy="RecycleElement" MinimumHeightRequest="30" MinimumWidthRequest="30">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <ViewCell.View>
+                            <ViewCell.ContextActions>
+                                <MenuItem Clicked="OnEdit" Text="Edit" />
+                                <MenuItem Clicked="OnDelete" Text="Delete" />
+                            </ViewCell.ContextActions>
+
+                          
+                               
                                 <StackLayout Padding="10">
                                     <StackLayout Orientation="Horizontal">
                                         <Label Text="{Binding NazwaGatunku} " FontAttributes="Bold"/>
                                     </StackLayout>
                                 </StackLayout>
-                            </ViewCell.View>
+
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>

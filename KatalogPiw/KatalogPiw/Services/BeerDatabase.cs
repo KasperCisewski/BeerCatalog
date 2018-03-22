@@ -79,6 +79,15 @@ namespace KatalogPiw.Services
                 return (from c in database.Table<Gatunek>() select c).ToList();
             }
         }
+        
+        public Gatunek GetGatunek(int i)
+        {
+            lock(locker)
+            {
+                List<Gatunek> Gatunki = GetGatunki();
+                return Gatunki[i];
+            }
+        }
 
         public List<Browar> GetBrowary()
         {
@@ -88,11 +97,28 @@ namespace KatalogPiw.Services
             }
         }
 
+        public Browar GetBrowar(int i)
+        {
+            lock(locker)
+            {
+                List<Browar> Browary = GetBrowary();
+                return Browary[i];
+            }
+        }
+
         public List<Beer> GetPiwa()
         {
             lock(locker)
             {
                 return(from c in database.Table<Beer>() select c).ToList();
+            }
+        }
+        public Beer GetPiwo(int i)
+        {
+            lock(locker)
+            {
+                List<Beer> Piwa = GetPiwa();
+                return Piwa[i];
             }
         }
     }

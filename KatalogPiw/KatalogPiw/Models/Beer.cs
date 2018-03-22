@@ -28,6 +28,7 @@ namespace KatalogPiw.Models
         public string Opis { get; set; }
         public string FoodParing { get; set; }
        // ImageSource imageSource;
+        public bool IsSelect { get; set; }
 
        public Beer()
         {

@@ -22,6 +22,8 @@ namespace KatalogPiw.Views
             InitializeComponent();
         }
          
+
+
         private async void buttonRefreshButton_Click(object sender, TextChangedEventArgs e)
         {
             vm = new ViewModels.DodawaniePiwaViewModel();
@@ -46,14 +48,15 @@ namespace KatalogPiw.Views
         }
         private async void buttonPokazListe_Click(object sender,TextChangedEventArgs e)
         {
-            if(MainPage.ListaPiw.Count==0)
-            {
+            if(App.Database.GetPiwa().Count==0)
+            { 
                 DisplayAlert("Error", "Nie masz zadnych piw w liscie, dodaj piwo!", "OK");
             }
             else
             {             
                 await Navigation.PushAsync(new PokazListePiw());
             }
+       
         }
     }
 }

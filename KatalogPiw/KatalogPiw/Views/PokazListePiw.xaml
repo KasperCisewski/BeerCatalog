@@ -10,16 +10,17 @@
                 <ViewCell>
                     <ViewCell.View>
                         <StackLayout Padding="10">
-                             <StackLayout Orientation="Horizontal">
-                                    <Label Text="{Binding Id} " FontAttributes="Bold"/>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding ID} " FontAttributes="Bold"/>
                                     <Label Text=" |"/>
                                     <Label Text="{Binding NazwaPiwa}" FontAttributes="Bold"/>
                                     <Label Text=" |"/>
-                                    <Label Text="{Binding Piwa.Browary.NazwaBrowaru}" FontAttributes="Italic"/>
+                                    <Label Text="{Binding Browary[0].NazwaBrowaru}" FontAttributes="Italic"/>
                                     <Label Text=" |"/>
-                                    <Label Text="{Binding Gatunek.NazwaGatunku}"/>
-                             </StackLayout>
-                        </StackLayout>
+                                    <Label Text="{Binding Gatunki[0].NazwaGatunku}"/>
+                                    <Switch x:Name="IsSelect" IsToggled="{Binding IsSelect}"/>
+                                </StackLayout>
+                            </StackLayout>
                     </ViewCell.View>
                 </ViewCell>
             </DataTemplate>

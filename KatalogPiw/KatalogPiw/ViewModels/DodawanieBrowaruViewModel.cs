@@ -26,6 +26,10 @@ namespace KatalogPiw.ViewModels
         public DodawanieBrowaruViewModel()
         {
             _browarList = new ObservableCollection<Browar>();
+            for (int i = 0; i < App.Database.GetBrowary().Count; i++)
+            {
+                _browarList.Add(KatalogPiw.App.Database.GetBrowar(i));
+            }
 
         }
      

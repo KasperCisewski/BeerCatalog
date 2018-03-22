@@ -31,15 +31,32 @@ namespace KatalogPiw.ViewModels
         public DodawaniePiwaViewModel()
         {
             _piwaList = new ObservableCollection<Beer>();
-                    
             Browary = new List<Models.Browar>();
             Browary = App.Database.GetBrowary();
 
             Gatunki = new List<Gatunek>();
             Gatunki = App.Database.GetGatunki();
-            
 
-            
+            //for (int i = 0; i < _piwaList.Count; i++)
+            //{
+            //    ListaPiw[i].Browary = App.Database.GetBrowary();
+            //    ListaPiw[i].Gatunki = App.Database.GetGatunki();
+
+            //}
+            for (int i=0;i<App.Database.GetPiwa().Count;i++)
+            {
+                _piwaList.Add(App.Database.GetPiwo(i));
+                _piwaList[i].Browary = App.Database.GetBrowary();
+                _piwaList[i].Gatunki = App.Database.GetGatunki();
+            }
+
+
+
+        }
+
+
+        public static void Init()
+        {
 
         }
 
@@ -52,7 +69,7 @@ namespace KatalogPiw.ViewModels
             KatalogPiw.App.Database.SaveBeer(beer);
             notifyCollectionChanged(new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Add, beer));
 
-            Views.MainPage.ListaPiw.Add(beer);
+           // Views.MainPage.ListaPiw.Add(beer);
         }
 
         public event NotifyCollectionChangedEventHandler CollectionChanged;

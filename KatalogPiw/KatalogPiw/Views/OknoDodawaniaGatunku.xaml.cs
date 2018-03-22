@@ -12,7 +12,7 @@ namespace KatalogPiw.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class OknoDodawaniaGatunku : ContentPage
     {
-        ViewModels.DodawanieGatunkuViewModel vm;
+         ViewModels.DodawanieGatunkuViewModel vm;
         public OknoDodawaniaGatunku()
         {
             vm = new ViewModels.DodawanieGatunkuViewModel();
@@ -31,7 +31,16 @@ namespace KatalogPiw.Views
             {
                 string Nazwa = NazwaGatunku.Text;
                 vm.DodajGatunek(Nazwa);
+                
             }
+        }
+        private async void OnEdit(object sender,EventArgs e)
+        {
+
+        }
+        private async void OnDelete(object Sender,EventArgs e)
+        {
+
         }
         async void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
         {
